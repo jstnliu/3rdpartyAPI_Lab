@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const factsCtrl = require('../controllers/facts');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+//GET /cats/fact
+router.get('/', factsCtrl.show);
 
 module.exports = router;
